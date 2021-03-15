@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using project1.Log;
+using ViauslDB.Log;
 
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     public partial class LogsForm : Form
     {

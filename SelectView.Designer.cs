@@ -1,5 +1,5 @@
 ﻿
-namespace project1
+namespace ViauslDB
 {
     partial class SelectView
     {

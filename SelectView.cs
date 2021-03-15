@@ -3,10 +3,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using project1.Modifiers;
-using project1.Database;
+using ViauslDB.Modifiers;
+using ViauslDB.Database;
 
-namespace project1
+namespace ViauslDB
 {
     public partial class SelectView : UserControl
     {

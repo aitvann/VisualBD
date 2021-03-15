@@ -2,12 +2,12 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using project1.Forms;
-using project1.Database;
-using project1.Log;
+using ViauslDB.Forms;
+using ViauslDB.Database;
+using ViauslDB.Log;
 using Npgsql;
 
-namespace project1
+namespace ViauslDB
 {
     public partial class MainWindow : Form
     {

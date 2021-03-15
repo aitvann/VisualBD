@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     public partial class InsertForm : Form
     {

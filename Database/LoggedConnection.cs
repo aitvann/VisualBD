@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using project1.Log;
+using ViauslDB.Log;
 using System.Text.RegularExpressions;
 
-namespace project1.Database
+namespace ViauslDB.Database
 {
     public class LoggedConnection<T> : IConnection<T>
     {

@@ -1,4 +1,4 @@
-﻿namespace project1.Log
+﻿namespace ViauslDB.Log
 {
     public delegate void LogAddedHandler(string log);
 

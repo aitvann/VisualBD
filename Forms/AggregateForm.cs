@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using project1.Database;
+using ViauslDB.Database;
 using Npgsql;
 
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     public partial class AggregateForm : Form
     {

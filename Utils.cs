@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Npgsql;
 
-namespace project1
+namespace ViauslDB
 {
     public static class Utils
     {

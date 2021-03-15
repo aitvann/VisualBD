@@ -5,7 +5,7 @@ using System.Linq;
 using System.Collections.Generic;
 using Npgsql;
 
-namespace project1.Database
+namespace ViauslDB.Database
 {
     public class PgDatabase
     {

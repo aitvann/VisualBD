@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace project1.Properties {
+namespace ViauslDB.Properties {
     using System;
     
     

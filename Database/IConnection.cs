@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Data;
 
-namespace project1.Database
+namespace ViauslDB.Database
 {
     public interface IConnection<T> : IDisposable
     {

@@ -1,6 +1,6 @@
-﻿using project1.Modifiers;
+﻿using ViauslDB.Modifiers;
 
-namespace project1
+namespace ViauslDB
 {
     partial class MainWindow
     {
@@ -40,13 +40,13 @@ namespace project1
             this.createViwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.order = new project1.Modifiers.OrderModifier();
-            this.pageSelector = new project1.Modifiers.PageSelectorModifier();
-            this.joinTable = new project1.Modifiers.JoinTableModifier();
-            this.columnsSelect = new project1.Modifiers.ColumnsSelectModifier();
-            this.filter = new project1.Modifiers.FilterModifier();
-            this.tableSelect = new project1.Modifiers.TableModifier();
-            this.view = new project1.SelectView();
+            this.order = new ViauslDB.Modifiers.OrderModifier();
+            this.pageSelector = new ViauslDB.Modifiers.PageSelectorModifier();
+            this.joinTable = new ViauslDB.Modifiers.JoinTableModifier();
+            this.columnsSelect = new ViauslDB.Modifiers.ColumnsSelectModifier();
+            this.filter = new ViauslDB.Modifiers.FilterModifier();
+            this.tableSelect = new ViauslDB.Modifiers.TableModifier();
+            this.view = new ViauslDB.SelectView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 

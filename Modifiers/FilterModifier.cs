@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace project1.Modifiers
+namespace ViauslDB.Modifiers
 {
     public partial class FilterModifier : UserControl, SelectModifier
     {

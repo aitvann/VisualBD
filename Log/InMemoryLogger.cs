@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace project1.Log
+namespace ViauslDB.Log
 {
     public class InMemoryLogger: ILogger
     {

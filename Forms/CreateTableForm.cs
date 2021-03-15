@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     public partial class CreateTableForm : Form
     {

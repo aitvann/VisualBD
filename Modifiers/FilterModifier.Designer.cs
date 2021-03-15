@@ -1,5 +1,5 @@
 ﻿
-namespace project1.Modifiers
+namespace ViauslDB.Modifiers
 {
     partial class FilterModifier
     {

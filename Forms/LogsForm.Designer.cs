@@ -1,5 +1,5 @@
 ﻿
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     partial class LogsForm
     {

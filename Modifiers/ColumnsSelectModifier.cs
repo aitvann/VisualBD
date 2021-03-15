@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using project1.Database;
+using ViauslDB.Database;
 
-namespace project1.Modifiers
+namespace ViauslDB.Modifiers
 {
     public partial class ColumnsSelectModifier : UserControl, SelectModifier
     {

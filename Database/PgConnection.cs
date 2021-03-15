@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using Npgsql;
 
-namespace project1.Database
+namespace ViauslDB.Database
 {
     public class PgConnection : IConnection<NpgsqlConnection>
     {

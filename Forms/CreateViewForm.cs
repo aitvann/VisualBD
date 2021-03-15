@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace project1.Forms
+namespace ViauslDB.Forms
 {
     public partial class CreateViewForm : Form
     {
