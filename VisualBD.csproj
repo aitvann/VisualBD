@@ -191,6 +191,12 @@
     <Compile Include="Modifiers\TableModifier.Designer.cs">
       <DependentUpon>TableModifier.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectView.Designer.cs">
+      <DependentUpon>SelectView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Forms\AggregateForm.resx">
       <DependentUpon>AggregateForm.cs</DependentUpon>
@@ -240,6 +246,9 @@
     </Compile>
     <EmbeddedResource Include="Modifiers\TableModifier.resx">
       <DependentUpon>TableModifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectView.resx">
+      <DependentUpon>SelectView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

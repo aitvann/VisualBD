@@ -30,7 +30,6 @@ namespace project1
         /// </summary>
         private void InitializeComponent()
         {
-            this.grid = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,20 +45,10 @@ namespace project1
             this.joinTable = new project1.Modifiers.JoinTableModifier();
             this.columnsSelect = new project1.Modifiers.ColumnsSelectModifier();
             this.filter = new project1.Modifiers.FilterModifier();
-            this.table = new project1.Modifiers.TableModifier();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            this.tableSelect = new project1.Modifiers.TableModifier();
+            this.view = new project1.SelectView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grid
-            // 
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(184, 28);
-            this.grid.Margin = new System.Windows.Forms.Padding(4);
-            this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(644, 564);
-            this.grid.TabIndex = 0;
-            this.grid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellEndEdit);
             // 
             // menuStrip1
             // 
@@ -192,28 +181,42 @@ namespace project1
             this.filter.TabIndex = 16;
             this.filter.StateChanged += new System.EventHandler(this.UpdateTable);
             // 
-            // table
+            // tableSelect
             // 
-            this.table.Database = null;
-            this.table.Location = new System.Drawing.Point(16, 28);
-            this.table.Margin = new System.Windows.Forms.Padding(4);
-            this.table.Name = "table";
-            this.table.Size = new System.Drawing.Size(160, 55);
-            this.table.TabIndex = 17;
-            this.table.StateChanged += new System.EventHandler(this.table_StateChanged);
+            this.tableSelect.Database = null;
+            this.tableSelect.Location = new System.Drawing.Point(16, 28);
+            this.tableSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.tableSelect.Name = "tableSelect";
+            this.tableSelect.Size = new System.Drawing.Size(160, 55);
+            this.tableSelect.TabIndex = 17;
+            this.tableSelect.StateChanged += new System.EventHandler(this.tableSelect_StateChanged);
+            // 
+            // view
+            // 
+            this.view.ColumnsSelect = null;
+            this.view.Filter = null;
+            this.view.JoinTable = null;
+            this.view.Location = new System.Drawing.Point(184, 28);
+            this.view.Margin = new System.Windows.Forms.Padding(4);
+            this.view.Name = "view";
+            this.view.Order = null;
+            this.view.PageSelect = null;
+            this.view.Size = new System.Drawing.Size(644, 564);
+            this.view.TabIndex = 18;
+            this.view.TableSelect = null;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 641);
-            this.Controls.Add(this.table);
+            this.Controls.Add(this.view);
+            this.Controls.Add(this.tableSelect);
             this.Controls.Add(this.filter);
             this.Controls.Add(this.order);
             this.Controls.Add(this.pageSelector);
             this.Controls.Add(this.joinTable);
             this.Controls.Add(this.columnsSelect);
-            this.Controls.Add(this.grid);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.menuStrip1;
@@ -221,7 +224,6 @@ namespace project1
             this.Name = "MainWindow";
             this.Text = "Window";
             this.Load += new System.EventHandler(this.MainWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -230,8 +232,6 @@ namespace project1
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createTableToolStripMenuItem;
@@ -243,11 +243,12 @@ namespace project1
         private PageSelectorModifier pageSelector;
         private OrderModifier order;
         private FilterModifier filter;
-        private TableModifier table;
+        private TableModifier tableSelect;
         private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem createViwToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logsToolStripMenuItem;
+        private SelectView view;
     }
 }
 
