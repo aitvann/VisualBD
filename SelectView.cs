@@ -70,22 +70,18 @@ namespace ViauslDB
 
         private void AdjustSize()
         {
-            uint scrollBar = 0;
-            uint newWidth = (uint)Size.Width;
-            uint newHeight = (uint)Size.Height;
-
-            if (ContentWidth < Width)
-                newWidth = ContentWidth;
-            else
+            int scrollBar = 0;
+            if (ContentWidth >= Width)
                 scrollBar += 1;
 
-            if (ContentHeight < Height)
-                newHeight = ContentHeight;
-            else
+            if (ContentHeight >= Height)
                 scrollBar += 2;
 
-            grid.Size = new Size((int)newWidth, (int)newHeight);
             grid.ScrollBars = (ScrollBars)scrollBar;
+
+            uint newWidth = Math.Min((uint)Size.Width, ContentWidth);
+            uint newHeight = Math.Min((uint)Size.Height, ContentHeight);
+            grid.Size = new Size((int)newWidth, (int)newHeight);
         }
 
         private void grid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
