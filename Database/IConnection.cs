@@ -17,15 +17,14 @@ namespace ViauslDB.Database
     public static class IConnectionExtension
     {
         public static void Execute<T>(this IConnection<T> connection, string sql, IEnumerable<object> parametrs)
-            // Utils.IncrementalNameParametrs().Zip(parametrs) does not work, why https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.zip?view=net-5.0#System_Linq_Enumerable_Zip__2_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__
-            => connection.Execute(sql, Utils.IncrementalNameParametrs().Zip(parametrs, Tuple.Create));
+            => connection.Execute(sql, Utils.IncrementalNameParametrs().Zip(parametrs, (a, b) => (a, b)));
 
         public static void Execute<T>(this IConnection<T> connection, string sql)
             => connection.Execute(sql, Array.Empty<(string, object)>());
 
 
         public static object RequestValue<T>(this IConnection<T> connection, string sql, IEnumerable<object> parametrs)
-            => connection.RequestValue(sql, Utils.IncrementalNameParametrs().Zip(parametrs, Tuple.Create));
+            => connection.RequestValue(sql, Utils.IncrementalNameParametrs().Zip(parametrs, (a, b) => (a, b)));
 
         public static object RequestValue<T>(this IConnection<T> connection, string sql)
             => connection.RequestValue(sql, Enumerable.Empty<(string, object)>());
@@ -35,7 +34,6 @@ namespace ViauslDB.Database
             => connection.Request(sql, new DataSet(), parametrs);
 
         public static DataSet Request<T>(this IConnection<T> connection, string sql, IEnumerable<object> parametrs)
-            // Tuple.Create does not work, why
             => connection.Request(sql, new DataSet(), Utils.IncrementalNameParametrs().Zip(parametrs, (a, b) => (a, b)));
 
         public static DataSet Request<T>(this IConnection<T> connection, string sql)
