@@ -61,11 +61,11 @@ namespace ViauslDB
 
         public void UpdateTable()
         {
-            if (string.IsNullOrEmpty(TableSelect.Table))
-                return;
-
-            grid.DataSource = Database.Connection.Request(SelectString).Tables[0];
-            AdjustSize();
+            try
+            {
+                grid.DataSource = Database.Connection.Request(SelectString).Tables[0];
+                AdjustSize();
+            } catch (Npgsql.PostgresException) { } // ignore exception
         }
 
         private void AdjustSize()
