@@ -23,9 +23,7 @@ namespace ViauslDB
             view.JoinTable = joinTable;
 
             logger = new InMemoryLogger();
-            //SetDatabase("Host=localhost;Port=5432;Username=postgres;Password=7o-4W_;Database=postgres");
-            //SetDatabase("Host=localhost;Port=5432;Username=aitvann;Password=m3a0F8;Database=contlist_db");
-            SetDatabase("Host=localhost;Port=5432;Username=aitvann;Password=m3a0F8;Database=college1");
+            SetDatabase("Host=localhost;Port=5432;Username=postgres;Password=7o-4W_;Database=postgres");
 
             pageSelector.PageSize = 16;
         }
@@ -86,11 +84,11 @@ namespace ViauslDB
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            //if (!Reconnect())
-            //{
-            //    this.Close();
-            //    return;
-            //}
+            if (!Reconnect())
+            {
+                this.Close();
+                return;
+            }
         }
 
         private void UpdateTable(object sender, EventArgs e)
